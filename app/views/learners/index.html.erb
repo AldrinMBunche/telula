@@ -1,0 +1,125 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Learners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Learner</th>
+      <th>Client</th>
+      <th>Id type</th>
+      <th>Id number</th>
+      <th>Passport number</th>
+      <th>Date of birth</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Middle names</th>
+      <th>Title</th>
+      <th>Equity</th>
+      <th>Gender</th>
+      <th>Nationality</th>
+      <th>Citizen status</th>
+      <th>Disability status</th>
+      <th>Home language</th>
+      <th>Organising framework occupations</th>
+      <th>Socioeconomic status</th>
+      <th>No education</th>
+      <th>Highest school grade</th>
+      <th>Abet</th>
+      <th>Tertiary qualification</th>
+      <th>License code</th>
+      <th>Cellphone number</th>
+      <th>Email address</th>
+      <th>Next of kin name</th>
+      <th>Next of kin contact no</th>
+      <th>Guardian name</th>
+      <th>Guardian contact no</th>
+      <th>Storage cabinet no</th>
+      <th>Disposal date</th>
+      <th>R address line 1</th>
+      <th>R address line 2</th>
+      <th>R suburb</th>
+      <th>R city</th>
+      <th>R province</th>
+      <th>R postal code</th>
+      <th>R country</th>
+      <th>P address line 1</th>
+      <th>Address line 2</th>
+      <th>P suburb</th>
+      <th>P city</th>
+      <th>P province</th>
+      <th>P postal code</th>
+      <th>P country</th>
+      <th>Municipality</th>
+      <th>Urban rural</th>
+      <th>Photo</th>
+      <th>Photo name</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @learners.each do |learner| %>
+      <tr>
+        <td><%= learner.learner_id %></td>
+        <td><%= learner.client_id %></td>
+        <td><%= learner.id_type %></td>
+        <td><%= learner.id_number %></td>
+        <td><%= learner.passport_number %></td>
+        <td><%= learner.date_of_birth %></td>
+        <td><%= learner.first_name %></td>
+        <td><%= learner.last_name %></td>
+        <td><%= learner.middle_names %></td>
+        <td><%= learner.title %></td>
+        <td><%= learner.equity %></td>
+        <td><%= learner.gender %></td>
+        <td><%= learner.nationality %></td>
+        <td><%= learner.citizen_status %></td>
+        <td><%= learner.disability_status %></td>
+        <td><%= learner.home_language %></td>
+        <td><%= learner.organising_framework_occupations %></td>
+        <td><%= learner.socioeconomic_status %></td>
+        <td><%= learner.no_education %></td>
+        <td><%= learner.highest_school_grade %></td>
+        <td><%= learner.abet %></td>
+        <td><%= learner.tertiary_qualification %></td>
+        <td><%= learner.license_code %></td>
+        <td><%= learner.cellphone_number %></td>
+        <td><%= learner.email_address %></td>
+        <td><%= learner.next_of_kin_name %></td>
+        <td><%= learner.next_of_kin_contact_no %></td>
+        <td><%= learner.guardian_name %></td>
+        <td><%= learner.guardian_contact_no %></td>
+        <td><%= learner.storage_cabinet_no %></td>
+        <td><%= learner.disposal_date %></td>
+        <td><%= learner.r_address_line_1 %></td>
+        <td><%= learner.r_address_line_2 %></td>
+        <td><%= learner.r_suburb %></td>
+        <td><%= learner.r_city %></td>
+        <td><%= learner.r_province %></td>
+        <td><%= learner.r_postal_code %></td>
+        <td><%= learner.r_country %></td>
+        <td><%= learner.p_address_line_1 %></td>
+        <td><%= learner.address_line_2 %></td>
+        <td><%= learner.p_suburb %></td>
+        <td><%= learner.p_city %></td>
+        <td><%= learner.p_province %></td>
+        <td><%= learner.p_postal_code %></td>
+        <td><%= learner.p_country %></td>
+        <td><%= learner.municipality %></td>
+        <td><%= learner.urban_rural %></td>
+        <td><%= learner.photo %></td>
+        <td><%= learner.photo_name %></td>
+        <td><%= learner.notes %></td>
+        <td><%= link_to 'Show', learner %></td>
+        <td><%= link_to 'Edit', edit_learner_path(learner) %></td>
+        <td><%= link_to 'Destroy', learner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Learner', new_learner_path %>

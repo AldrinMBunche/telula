@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: lms4u_development
+  pool: 5
+  username: buzz
+  password: aldrin
+  host: localhost
+  
+  test:
+  adapter: postgresql
+  encoding: unicode
+  database: lms4u_test
+  pool: 5
+  username: buzz
+  password: aldrin
+  host: localhost
+  
+  production:
+  adapter: postgresql
+  encoding: unicode
+  database: lms4u_production
+  pool: 5
+  username: buzz
+  password: aldrin
+  host: localhost

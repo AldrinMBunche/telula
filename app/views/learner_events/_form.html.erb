@@ -1,0 +1,105 @@
+<%= form_for(@learner_event) do |f| %>
+  <% if @learner_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@learner_event.errors.count, "error") %> prohibited this learner_event from being saved:</h2>
+
+      <ul>
+      <% @learner_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :TRAINING_ID %><br>
+    <%= f.number_field :TRAINING_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :LEARNER_ID %><br>
+    <%= f.number_field :LEARNER_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :AGREEMENT_NO %><br>
+    <%= f.number_field :AGREEMENT_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :AGREEMENT_ON %><br>
+    <%= f.date_select :AGREEMENT_ON %>
+  </div>
+  <div class="field">
+    <%= f.label :REGISTRATION_NO %><br>
+    <%= f.number_field :REGISTRATION_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :CERTIFICATE_NO %><br>
+    <%= f.number_field :CERTIFICATE_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :CERTIFICATE_ON %><br>
+    <%= f.date_select :CERTIFICATE_ON %>
+  </div>
+  <div class="field">
+    <%= f.label :BATCH_NO %><br>
+    <%= f.number_field :BATCH_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :MACHINE_RESTRICTION %><br>
+    <%= f.text_field :MACHINE_RESTRICTION %>
+  </div>
+  <div class="field">
+    <%= f.label :CERTIFICATE_ISSUED %><br>
+    <%= f.text_area :CERTIFICATE_ISSUED %>
+  </div>
+  <div class="field">
+    <%= f.label :CERTIFICATE_ISSUED_BY %><br>
+    <%= f.text_area :CERTIFICATE_ISSUED_BY %>
+  </div>
+  <div class="field">
+    <%= f.label :OLD_BATCH_NO %><br>
+    <%= f.number_field :OLD_BATCH_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :CANCELATION_ON %><br>
+    <%= f.date_select :CANCELATION_ON %>
+  </div>
+  <div class="field">
+    <%= f.label :TRADE_TEST_ON %><br>
+    <%= f.date_select :TRADE_TEST_ON %>
+  </div>
+  <div class="field">
+    <%= f.label :CERTIFICATE_NOTES %><br>
+    <%= f.text_field :CERTIFICATE_NOTES %>
+  </div>
+  <div class="field">
+    <%= f.label :MED %><br>
+    <%= f.text_area :MED %>
+  </div>
+  <div class="field">
+    <%= f.label :HQ %><br>
+    <%= f.text_area :HQ %>
+  </div>
+  <div class="field">
+    <%= f.label :EYE %><br>
+    <%= f.text_area :EYE %>
+  </div>
+  <div class="field">
+    <%= f.label :PRDP %><br>
+    <%= f.text_area :PRDP %>
+  </div>
+  <div class="field">
+    <%= f.label :LOG %><br>
+    <%= f.text_area :LOG %>
+  </div>
+  <div class="field">
+    <%= f.label :PRI_OR %><br>
+    <%= f.text_area :PRI_OR %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_DOC %><br>
+    <%= f.text_area :ID_DOC %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

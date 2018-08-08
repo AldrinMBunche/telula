@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Moderation:</strong>
+  <%= @moderation.moderation_id %>
+</p>
+
+<p>
+  <strong>Training:</strong>
+  <%= @moderation.training_id %>
+</p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @moderation.trainer_id %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @moderation.unit_id %>
+</p>
+
+<p>
+  <strong>Internal by:</strong>
+  <%= @moderation.internal_by %>
+</p>
+
+<p>
+  <strong>Internal on:</strong>
+  <%= @moderation.internal_on %>
+</p>
+
+<p>
+  <strong>Internal outcome:</strong>
+  <%= @moderation.internal_outcome %>
+</p>
+
+<p>
+  <strong>Internal recommendation:</strong>
+  <%= @moderation.internal_recommendation %>
+</p>
+
+<p>
+  <strong>External by:</strong>
+  <%= @moderation.external_by %>
+</p>
+
+<p>
+  <strong>External on:</strong>
+  <%= @moderation.external_on %>
+</p>
+
+<p>
+  <strong>External outcome:</strong>
+  <%= @moderation.external_outcome %>
+</p>
+
+<p>
+  <strong>External recommendation:</strong>
+  <%= @moderation.external_recommendation %>
+</p>
+
+<%= link_to 'Edit', edit_moderation_path(@moderation) %> |
+<%= link_to 'Back', moderations_path %>

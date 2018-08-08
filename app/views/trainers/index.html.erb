@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trainers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trainer</th>
+      <th>Client</th>
+      <th>First name</th>
+      <th>Middle names</th>
+      <th>Last name</th>
+      <th>Id number</th>
+      <th>Date of birth</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Created on</th>
+      <th>Type</th>
+      <th>Contact no</th>
+      <th>Staff rate type</th>
+      <th>Staff rate</th>
+      <th>Status reason</th>
+      <th>Notes</th>
+      <th>Id type</th>
+      <th>Training speciality area</th>
+      <th>Email address</th>
+      <th>Licence code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainers.each do |trainer| %>
+      <tr>
+        <td><%= trainer.trainer_id %></td>
+        <td><%= trainer.client_id %></td>
+        <td><%= trainer.first_name %></td>
+        <td><%= trainer.middle_names %></td>
+        <td><%= trainer.last_name %></td>
+        <td><%= trainer.id_number %></td>
+        <td><%= trainer.date_of_birth %></td>
+        <td><%= trainer.status %></td>
+        <td><%= trainer.created_by %></td>
+        <td><%= trainer.created_on %></td>
+        <td><%= trainer.type %></td>
+        <td><%= trainer.contact_no %></td>
+        <td><%= trainer.staff_rate_type %></td>
+        <td><%= trainer.staff_rate %></td>
+        <td><%= trainer.status_reason %></td>
+        <td><%= trainer.notes %></td>
+        <td><%= trainer.id_type %></td>
+        <td><%= trainer.training_speciality_area %></td>
+        <td><%= trainer.email_address %></td>
+        <td><%= trainer.licence_code %></td>
+        <td><%= link_to 'Show', trainer %></td>
+        <td><%= link_to 'Edit', edit_trainer_path(trainer) %></td>
+        <td><%= link_to 'Destroy', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trainer', new_trainer_path %>

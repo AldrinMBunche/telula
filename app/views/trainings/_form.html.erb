@@ -1,0 +1,121 @@
+<%= form_for(@training) do |f| %>
+  <% if @training.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
+
+      <ul>
+      <% @training.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :training_id %><br>
+    <%= f.number_field :training_id %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :branch_id %><br>
+    <%= f.number_field :branch_id %>
+  </div>
+  <div class="field">
+    <%= f.label :qualification_id %><br>
+    <%= f.number_field :qualification_id %>
+  </div>
+  <div class="field">
+    <%= f.label :training_status %><br>
+    <%= f.text_field :training_status %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_learners %><br>
+    <%= f.number_field :number_of_learners %>
+  </div>
+  <div class="field">
+    <%= f.label :re_certification %><br>
+    <%= f.text_field :re_certification %>
+  </div>
+  <div class="field">
+    <%= f.label :event_type %><br>
+    <%= f.text_field :event_type %>
+  </div>
+  <div class="field">
+    <%= f.label :assessment_method %><br>
+    <%= f.text_field :assessment_method %>
+  </div>
+  <div class="field">
+    <%= f.label :internal %><br>
+    <%= f.text_field :internal %>
+  </div>
+  <div class="field">
+    <%= f.label :start_on %><br>
+    <%= f.datetime_select :start_on %>
+  </div>
+  <div class="field">
+    <%= f.label :end_on %><br>
+    <%= f.datetime_select :end_on %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %><br>
+    <%= f.text_field :venue %>
+  </div>
+  <div class="field">
+    <%= f.label :cert_valid_from %><br>
+    <%= f.date_select :cert_valid_from %>
+  </div>
+  <div class="field">
+    <%= f.label :cert_valid_to %><br>
+    <%= f.date_select :cert_valid_to %>
+  </div>
+  <div class="field">
+    <%= f.label :remind_expiry %><br>
+    <%= f.text_field :remind_expiry %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_code %><br>
+    <%= f.text_field :machine_code %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_attachment %><br>
+    <%= f.text_field :machine_attachment %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_capacity %><br>
+    <%= f.text_field :machine_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :learnership_branch %><br>
+    <%= f.text_field :learnership_branch %>
+  </div>
+  <div class="field">
+    <%= f.label :learnership_site %><br>
+    <%= f.text_field :learnership_site %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :qa %><br>
+    <%= f.text_field :qa %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :ls_start_on %><br>
+    <%= f.date_select :ls_start_on %>
+  </div>
+  <div class="field">
+    <%= f.label :ls_end_on %><br>
+    <%= f.date_select :ls_end_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

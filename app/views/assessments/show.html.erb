@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assessment:</strong>
+  <%= @assessment.assessment_id %>
+</p>
+
+<p>
+  <strong>Training:</strong>
+  <%= @assessment.training_id %>
+</p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @assessment.trainer_id %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @assessment.unit_id %>
+</p>
+
+<p>
+  <strong>Learner:</strong>
+  <%= @assessment.learner_id %>
+</p>
+
+<p>
+  <strong>Assess date:</strong>
+  <%= @assessment.assess_date %>
+</p>
+
+<p>
+  <strong>Poe:</strong>
+  <%= @assessment.poe %>
+</p>
+
+<p>
+  <strong>Rpl:</strong>
+  <%= @assessment.rpl %>
+</p>
+
+<p>
+  <strong>Results:</strong>
+  <%= @assessment.results %>
+</p>
+
+<p>
+  <strong>Moderated:</strong>
+  <%= @assessment.moderated %>
+</p>
+
+<p>
+  <strong>Attended:</strong>
+  <%= @assessment.attended %>
+</p>
+
+<p>
+  <strong>Formative results:</strong>
+  <%= @assessment.formative_results %>
+</p>
+
+<p>
+  <strong>Formative attempts:</strong>
+  <%= @assessment.formative_attempts %>
+</p>
+
+<p>
+  <strong>Summative results:</strong>
+  <%= @assessment.summative_results %>
+</p>
+
+<p>
+  <strong>Summative attempts:</strong>
+  <%= @assessment.summative_attempts %>
+</p>
+
+<p>
+  <strong>Poe not submit reason:</strong>
+  <%= @assessment.poe_not_submit_reason %>
+</p>
+
+<p>
+  <strong>Reason not completed:</strong>
+  <%= @assessment.reason_not_completed %>
+</p>
+
+<p>
+  <strong>Assesor recommendations:</strong>
+  <%= @assessment.assesor_recommendations %>
+</p>
+
+<p>
+  <strong>Mentor notes:</strong>
+  <%= @assessment.mentor_notes %>
+</p>
+
+<p>
+  <strong>Moderated ext:</strong>
+  <%= @assessment.moderated_ext %>
+</p>
+
+<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+<%= link_to 'Back', assessments_path %>

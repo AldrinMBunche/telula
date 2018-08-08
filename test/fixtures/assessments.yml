@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assessment_id: 1
+  training_id: 1
+  trainer_id: 1
+  unit_id: 1
+  learner_id: 1
+  assess_date: 2018-08-07
+  poe: MyString
+  rpl: MyString
+  results: MyString
+  moderated: MyString
+  attended: MyString
+  formative_results: MyString
+  formative_attempts: 1
+  summative_results: MyString
+  summative_attempts: 1
+  poe_not_submit_reason: MyString
+  reason_not_completed: MyString
+  assesor_recommendations: MyString
+  mentor_notes: MyString
+  moderated_ext: MyString
+
+two:
+  assessment_id: 1
+  training_id: 1
+  trainer_id: 1
+  unit_id: 1
+  learner_id: 1
+  assess_date: 2018-08-07
+  poe: MyString
+  rpl: MyString
+  results: MyString
+  moderated: MyString
+  attended: MyString
+  formative_results: MyString
+  formative_attempts: 1
+  summative_results: MyString
+  summative_attempts: 1
+  poe_not_submit_reason: MyString
+  reason_not_completed: MyString
+  assesor_recommendations: MyString
+  mentor_notes: MyString
+  moderated_ext: MyString

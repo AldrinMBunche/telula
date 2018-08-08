@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180803120230) do
+ActiveRecord::Schema.define(version: 20180807120826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(version: 20180803120230) do
     t.string   "rpl"
     t.string   "results"
     t.string   "moderated"
-    t.string   "created_by"
-    t.datetime "created_on"
+    t.string   "attended"
     t.string   "formative_results"
     t.integer  "formative_attempts"
     t.string   "summative_results"
@@ -45,19 +44,19 @@ ActiveRecord::Schema.define(version: 20180803120230) do
   create_table "clients", force: :cascade do |t|
     t.integer  "client_id"
     t.integer  "company_id"
+    t.string   "type"
     t.string   "name"
     t.string   "business_reg_no"
     t.integer  "tel_no"
+    t.integer  "fax_no"
     t.string   "account_no"
-    t.string   "created_by"
-    t.datetime "created_on"
-    t.string   "address_line_1"
-    t.string   "address_line_2"
-    t.string   "suburb"
-    t.string   "city"
-    t.string   "province"
-    t.string   "postal_code"
-    t.string   "country"
+    t.string   "r_address_line_1"
+    t.string   "r_address_line_2"
+    t.string   "r_suburb"
+    t.string   "r_city"
+    t.string   "r_province"
+    t.integer  "r_postal_code"
+    t.string   "r_country"
     t.string   "p_address_line_1"
     t.string   "p_address_line_2"
     t.string   "p_suburb"
@@ -65,14 +64,17 @@ ActiveRecord::Schema.define(version: 20180803120230) do
     t.string   "p_province"
     t.integer  "p_postal_code"
     t.string   "p_country"
-    t.string   "branch"
-    t.string   "account_manager"
-    t.string   "skills_development_levy"
-    t.string   "contact_person"
-    t.string   "contact_email"
-    t.integer  "contact_telephone"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.integer  "client_branch"
+    t.string   "sales_person"
+    t.string   "branch_id"
+    t.string   "sdl_number"
+    t.string   "contact_name"
+    t.string   "main_email"
+    t.string   "wdyhau"
+    t.integer  "credit_limit"
+    t.string   "payment_term"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "learner_events", force: :cascade do |t|
@@ -170,10 +172,6 @@ ActiveRecord::Schema.define(version: 20180803120230) do
     t.datetime "external_on"
     t.string   "external_outcome"
     t.string   "external_recommendation"
-    t.string   "created_by"
-    t.datetime "created_on"
-    t.string   "updated_by"
-    t.datetime "updated_on"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -187,21 +185,6 @@ ActiveRecord::Schema.define(version: 20180803120230) do
   end
 
   add_index "pg_search_documents", ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.string   "author"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "qualifications", force: :cascade do |t|
     t.integer  "qualification_id"
@@ -237,17 +220,6 @@ ActiveRecord::Schema.define(version: 20180803120230) do
     t.datetime "updated_at",                null: false
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string   "fname"
-    t.string   "lname"
-    t.integer  "marks"
-    t.float    "percentage"
-    t.string   "grade"
-    t.string   "remark"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "trainers", force: :cascade do |t|
     t.integer  "trainer_id"
     t.integer  "client_id"
@@ -273,37 +245,35 @@ ActiveRecord::Schema.define(version: 20180803120230) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "training_events", force: :cascade do |t|
+  create_table "trainings", force: :cascade do |t|
     t.integer  "training_id"
     t.integer  "client_id"
     t.integer  "branch_id"
     t.integer  "qualification_id"
-    t.string   "pre_assessment"
-    t.date     "pre_assessment_on"
-    t.string   "pre_assessment_status"
     t.string   "training_status"
     t.integer  "number_of_learners"
-    t.text     "re_certification"
+    t.string   "re_certification"
     t.string   "event_type"
     t.string   "assessment_method"
     t.string   "internal"
-    t.date     "start_on"
-    t.date     "end_on"
+    t.datetime "start_on"
+    t.datetime "end_on"
     t.string   "venue"
     t.date     "cert_valid_from"
     t.date     "cert_valid_to"
+    t.string   "remind_expiry"
     t.string   "machine_code"
     t.string   "machine_attachment"
     t.string   "machine_capacity"
+    t.string   "learnership_branch"
     t.string   "learnership_site"
-    t.text     "notes"
+    t.string   "notes"
     t.string   "qa"
     t.integer  "duration"
     t.date     "ls_start_on"
     t.date     "ls_end_on"
-    t.string   "duration_units"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end

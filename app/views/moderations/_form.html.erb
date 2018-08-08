@@ -1,0 +1,65 @@
+<%= form_for(@moderation) do |f| %>
+  <% if @moderation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@moderation.errors.count, "error") %> prohibited this moderation from being saved:</h2>
+
+      <ul>
+      <% @moderation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :moderation_id %><br>
+    <%= f.number_field :moderation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :training_id %><br>
+    <%= f.number_field :training_id %>
+  </div>
+  <div class="field">
+    <%= f.label :trainer_id %><br>
+    <%= f.number_field :trainer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_id %><br>
+    <%= f.number_field :unit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_by %><br>
+    <%= f.text_field :internal_by %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_on %><br>
+    <%= f.datetime_select :internal_on %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_outcome %><br>
+    <%= f.text_field :internal_outcome %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_recommendation %><br>
+    <%= f.text_field :internal_recommendation %>
+  </div>
+  <div class="field">
+    <%= f.label :external_by %><br>
+    <%= f.text_field :external_by %>
+  </div>
+  <div class="field">
+    <%= f.label :external_on %><br>
+    <%= f.datetime_select :external_on %>
+  </div>
+  <div class="field">
+    <%= f.label :external_outcome %><br>
+    <%= f.text_field :external_outcome %>
+  </div>
+  <div class="field">
+    <%= f.label :external_recommendation %><br>
+    <%= f.text_field :external_recommendation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

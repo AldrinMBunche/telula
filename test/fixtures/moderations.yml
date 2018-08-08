@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moderation_id: 1
+  training_id: 1
+  trainer_id: 1
+  unit_id: 1
+  internal_by: MyString
+  internal_on: 2018-08-07 14:07:19
+  internal_outcome: MyString
+  internal_recommendation: MyString
+  external_by: MyString
+  external_on: 2018-08-07 14:07:19
+  external_outcome: MyString
+  external_recommendation: MyString
+
+two:
+  moderation_id: 1
+  training_id: 1
+  trainer_id: 1
+  unit_id: 1
+  internal_by: MyString
+  internal_on: 2018-08-07 14:07:19
+  internal_outcome: MyString
+  internal_recommendation: MyString
+  external_by: MyString
+  external_on: 2018-08-07 14:07:19
+  external_outcome: MyString
+  external_recommendation: MyString

@@ -1,0 +1,133 @@
+<%= form_for(@qualification) do |f| %>
+  <% if @qualification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qualification.errors.count, "error") %> prohibited this qualification from being saved:</h2>
+
+      <ul>
+      <% @qualification.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :qualification_id %><br>
+    <%= f.number_field :qualification_id %>
+  </div>
+  <div class="field">
+    <%= f.label :saqa_aligned %><br>
+    <%= f.text_field :saqa_aligned %>
+  </div>
+  <div class="field">
+    <%= f.label :is_single_unit %><br>
+    <%= f.text_field :is_single_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.number_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :display_name %><br>
+    <%= f.text_field :display_name %>
+  </div>
+  <div class="field">
+    <%= f.label :nqf_level %><br>
+    <%= f.number_field :nqf_level %>
+  </div>
+  <div class="field">
+    <%= f.label :credits %><br>
+    <%= f.number_field :credits %>
+  </div>
+  <div class="field">
+    <%= f.label :accredited %><br>
+    <%= f.text_field :accredited %>
+  </div>
+  <div class="field">
+    <%= f.label :accredited_start_on %><br>
+    <%= f.date_select :accredited_start_on %>
+  </div>
+  <div class="field">
+    <%= f.label :accredited_end_on %><br>
+    <%= f.date_select :accredited_end_on %>
+  </div>
+  <div class="field">
+    <%= f.label :saqa_reg_start_on %><br>
+    <%= f.date_select :saqa_reg_start_on %>
+  </div>
+  <div class="field">
+    <%= f.label :saqa_reg_end_on %><br>
+    <%= f.date_select :saqa_reg_end_on %>
+  </div>
+  <div class="field">
+    <%= f.label :can_expire %><br>
+    <%= f.check_box :can_expire %>
+  </div>
+  <div class="field">
+    <%= f.label :valid_months %><br>
+    <%= f.number_field :valid_months %>
+  </div>
+  <div class="field">
+    <%= f.label :use_assessor %><br>
+    <%= f.text_field :use_assessor %>
+  </div>
+  <div class="field">
+    <%= f.label :use_learnership_fields %><br>
+    <%= f.text_field :use_learnership_fields %>
+  </div>
+  <div class="field">
+    <%= f.label :use_training_planner %><br>
+    <%= f.text_field :use_training_planner %>
+  </div>
+  <div class="field">
+    <%= f.label :use_machine_attributes %><br>
+    <%= f.text_field :use_machine_attributes %>
+  </div>
+  <div class="field">
+    <%= f.label :use_logbook_fields %><br>
+    <%= f.text_field :use_logbook_fields %>
+  </div>
+  <div class="field">
+    <%= f.label :certificate_template_id %><br>
+    <%= f.number_field :certificate_template_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :created_on %><br>
+    <%= f.datetime_select :created_on %>
+  </div>
+  <div class="field">
+    <%= f.label :qualification_type %><br>
+    <%= f.text_field :qualification_type %>
+  </div>
+  <div class="field">
+    <%= f.label :saqa_enroll_end_on %><br>
+    <%= f.date_select :saqa_enroll_end_on %>
+  </div>
+  <div class="field">
+    <%= f.label :use_formative_summative %><br>
+    <%= f.text_field :use_formative_summative %>
+  </div>
+  <div class="field">
+    <%= f.label :use_apprenticeship_fields %><br>
+    <%= f.text_field :use_apprenticeship_fields %>
+  </div>
+  <div class="field">
+    <%= f.label :artisan_trade %><br>
+    <%= f.text_field :artisan_trade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

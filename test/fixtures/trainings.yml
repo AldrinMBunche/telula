@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  training_id: 1
+  client_id: 1
+  branch_id: 1
+  qualification_id: 1
+  training_status: MyString
+  number_of_learners: 1
+  re_certification: MyString
+  event_type: MyString
+  assessment_method: MyString
+  internal: MyString
+  start_on: 2018-08-07 13:19:38
+  end_on: 2018-08-07 13:19:38
+  venue: MyString
+  cert_valid_from: 2018-08-07
+  cert_valid_to: 2018-08-07
+  remind_expiry: MyString
+  machine_code: MyString
+  machine_attachment: MyString
+  machine_capacity: MyString
+  learnership_branch: MyString
+  learnership_site: MyString
+  notes: MyString
+  qa: MyString
+  duration: 1
+  ls_start_on: 2018-08-07
+  ls_end_on: 2018-08-07
+
+two:
+  training_id: 1
+  client_id: 1
+  branch_id: 1
+  qualification_id: 1
+  training_status: MyString
+  number_of_learners: 1
+  re_certification: MyString
+  event_type: MyString
+  assessment_method: MyString
+  internal: MyString
+  start_on: 2018-08-07 13:19:38
+  end_on: 2018-08-07 13:19:38
+  venue: MyString
+  cert_valid_from: 2018-08-07
+  cert_valid_to: 2018-08-07
+  remind_expiry: MyString
+  machine_code: MyString
+  machine_attachment: MyString
+  machine_capacity: MyString
+  learnership_branch: MyString
+  learnership_site: MyString
+  notes: MyString
+  qa: MyString
+  duration: 1
+  ls_start_on: 2018-08-07
+  ls_end_on: 2018-08-07

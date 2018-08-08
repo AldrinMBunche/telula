@@ -1,0 +1,97 @@
+<%= form_for(@assessment) do |f| %>
+  <% if @assessment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+      <ul>
+      <% @assessment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :assessment_id %><br>
+    <%= f.number_field :assessment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :training_id %><br>
+    <%= f.number_field :training_id %>
+  </div>
+  <div class="field">
+    <%= f.label :trainer_id %><br>
+    <%= f.number_field :trainer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_id %><br>
+    <%= f.number_field :unit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :learner_id %><br>
+    <%= f.number_field :learner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :assess_date %><br>
+    <%= f.date_select :assess_date %>
+  </div>
+  <div class="field">
+    <%= f.label :poe %><br>
+    <%= f.text_field :poe %>
+  </div>
+  <div class="field">
+    <%= f.label :rpl %><br>
+    <%= f.text_field :rpl %>
+  </div>
+  <div class="field">
+    <%= f.label :results %><br>
+    <%= f.text_field :results %>
+  </div>
+  <div class="field">
+    <%= f.label :moderated %><br>
+    <%= f.text_field :moderated %>
+  </div>
+  <div class="field">
+    <%= f.label :attended %><br>
+    <%= f.text_field :attended %>
+  </div>
+  <div class="field">
+    <%= f.label :formative_results %><br>
+    <%= f.text_field :formative_results %>
+  </div>
+  <div class="field">
+    <%= f.label :formative_attempts %><br>
+    <%= f.number_field :formative_attempts %>
+  </div>
+  <div class="field">
+    <%= f.label :summative_results %><br>
+    <%= f.text_field :summative_results %>
+  </div>
+  <div class="field">
+    <%= f.label :summative_attempts %><br>
+    <%= f.number_field :summative_attempts %>
+  </div>
+  <div class="field">
+    <%= f.label :poe_not_submit_reason %><br>
+    <%= f.text_field :poe_not_submit_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_not_completed %><br>
+    <%= f.text_field :reason_not_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :assesor_recommendations %><br>
+    <%= f.text_field :assesor_recommendations %>
+  </div>
+  <div class="field">
+    <%= f.label :mentor_notes %><br>
+    <%= f.text_field :mentor_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :moderated_ext %><br>
+    <%= f.text_field :moderated_ext %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

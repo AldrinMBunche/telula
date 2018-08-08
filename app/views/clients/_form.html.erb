@@ -1,0 +1,141 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br>
+    <%= f.number_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :business_reg_no %><br>
+    <%= f.text_field :business_reg_no %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_no %><br>
+    <%= f.number_field :tel_no %>
+  </div>
+  <div class="field">
+    <%= f.label :fax_no %><br>
+    <%= f.number_field :fax_no %>
+  </div>
+  <div class="field">
+    <%= f.label :account_no %><br>
+    <%= f.text_field :account_no %>
+  </div>
+  <div class="field">
+    <%= f.label :r_address_line_1 %><br>
+    <%= f.text_field :r_address_line_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :r_address_line_2 %><br>
+    <%= f.text_field :r_address_line_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :r_suburb %><br>
+    <%= f.text_field :r_suburb %>
+  </div>
+  <div class="field">
+    <%= f.label :r_city %><br>
+    <%= f.text_field :r_city %>
+  </div>
+  <div class="field">
+    <%= f.label :r_province %><br>
+    <%= f.text_field :r_province %>
+  </div>
+  <div class="field">
+    <%= f.label :r_postal_code %><br>
+    <%= f.number_field :r_postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :r_country %><br>
+    <%= f.text_field :r_country %>
+  </div>
+  <div class="field">
+    <%= f.label :p_address_line_1 %><br>
+    <%= f.text_field :p_address_line_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :p_address_line_2 %><br>
+    <%= f.text_field :p_address_line_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :p_suburb %><br>
+    <%= f.text_field :p_suburb %>
+  </div>
+  <div class="field">
+    <%= f.label :p_city %><br>
+    <%= f.text_field :p_city %>
+  </div>
+  <div class="field">
+    <%= f.label :p_province %><br>
+    <%= f.text_field :p_province %>
+  </div>
+  <div class="field">
+    <%= f.label :p_postal_code %><br>
+    <%= f.number_field :p_postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :p_country %><br>
+    <%= f.text_field :p_country %>
+  </div>
+  <div class="field">
+    <%= f.label :client_branch %><br>
+    <%= f.number_field :client_branch %>
+  </div>
+  <div class="field">
+    <%= f.label :sales_person %><br>
+    <%= f.text_field :sales_person %>
+  </div>
+  <div class="field">
+    <%= f.label :branch_id %><br>
+    <%= f.text_field :branch_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sdl_number %><br>
+    <%= f.text_field :sdl_number %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br>
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :main_email %><br>
+    <%= f.text_field :main_email %>
+  </div>
+  <div class="field">
+    <%= f.label :wdyhau %><br>
+    <%= f.text_field :wdyhau %>
+  </div>
+  <div class="field">
+    <%= f.label :credit_limit %><br>
+    <%= f.number_field :credit_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_term %><br>
+    <%= f.text_field :payment_term %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

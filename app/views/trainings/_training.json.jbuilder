@@ -1,0 +1,2 @@
+json.extract! training, :id, :training_id, :client_id, :branch_id, :qualification_id, :training_status, :number_of_learners, :re_certification, :event_type, :assessment_method, :internal, :start_on, :end_on, :venue, :cert_valid_from, :cert_valid_to, :remind_expiry, :machine_code, :machine_attachment, :machine_capacity, :learnership_branch, :learnership_site, :notes, :qa, :duration, :ls_start_on, :ls_end_on, :created_at, :updated_at
+json.url training_url(training, format: :json)

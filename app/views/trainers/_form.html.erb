@@ -1,0 +1,97 @@
+<%= form_for(@trainer) do |f| %>
+  <% if @trainer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trainer.errors.count, "error") %> prohibited this trainer from being saved:</h2>
+
+      <ul>
+      <% @trainer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trainer_id %><br>
+    <%= f.number_field :trainer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_names %><br>
+    <%= f.text_field :middle_names %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :id_number %><br>
+    <%= f.text_field :id_number %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.datetime_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :created_on %><br>
+    <%= f.datetime_select :created_on %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_no %><br>
+    <%= f.number_field :contact_no %>
+  </div>
+  <div class="field">
+    <%= f.label :staff_rate_type %><br>
+    <%= f.text_field :staff_rate_type %>
+  </div>
+  <div class="field">
+    <%= f.label :staff_rate %><br>
+    <%= f.number_field :staff_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :status_reason %><br>
+    <%= f.text_field :status_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :id_type %><br>
+    <%= f.text_field :id_type %>
+  </div>
+  <div class="field">
+    <%= f.label :training_speciality_area %><br>
+    <%= f.text_field :training_speciality_area %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :licence_code %><br>
+    <%= f.text_field :licence_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

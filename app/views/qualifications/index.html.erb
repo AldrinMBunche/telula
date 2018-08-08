@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Qualifications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Qualification</th>
+      <th>Saqa aligned</th>
+      <th>Is single unit</th>
+      <th>Code</th>
+      <th>Title</th>
+      <th>Display name</th>
+      <th>Nqf level</th>
+      <th>Credits</th>
+      <th>Accredited</th>
+      <th>Accredited start on</th>
+      <th>Accredited end on</th>
+      <th>Saqa reg start on</th>
+      <th>Saqa reg end on</th>
+      <th>Can expire</th>
+      <th>Valid months</th>
+      <th>Use assessor</th>
+      <th>Use learnership fields</th>
+      <th>Use training planner</th>
+      <th>Use machine attributes</th>
+      <th>Use logbook fields</th>
+      <th>Certificate template</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Created on</th>
+      <th>Qualification type</th>
+      <th>Saqa enroll end on</th>
+      <th>Use formative summative</th>
+      <th>Use apprenticeship fields</th>
+      <th>Artisan trade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualifications.each do |qualification| %>
+      <tr>
+        <td><%= qualification.qualification_id %></td>
+        <td><%= qualification.saqa_aligned %></td>
+        <td><%= qualification.is_single_unit %></td>
+        <td><%= qualification.code %></td>
+        <td><%= qualification.title %></td>
+        <td><%= qualification.display_name %></td>
+        <td><%= qualification.nqf_level %></td>
+        <td><%= qualification.credits %></td>
+        <td><%= qualification.accredited %></td>
+        <td><%= qualification.accredited_start_on %></td>
+        <td><%= qualification.accredited_end_on %></td>
+        <td><%= qualification.saqa_reg_start_on %></td>
+        <td><%= qualification.saqa_reg_end_on %></td>
+        <td><%= qualification.can_expire %></td>
+        <td><%= qualification.valid_months %></td>
+        <td><%= qualification.use_assessor %></td>
+        <td><%= qualification.use_learnership_fields %></td>
+        <td><%= qualification.use_training_planner %></td>
+        <td><%= qualification.use_machine_attributes %></td>
+        <td><%= qualification.use_logbook_fields %></td>
+        <td><%= qualification.certificate_template_id %></td>
+        <td><%= qualification.status %></td>
+        <td><%= qualification.created_by %></td>
+        <td><%= qualification.created_on %></td>
+        <td><%= qualification.qualification_type %></td>
+        <td><%= qualification.saqa_enroll_end_on %></td>
+        <td><%= qualification.use_formative_summative %></td>
+        <td><%= qualification.use_apprenticeship_fields %></td>
+        <td><%= qualification.artisan_trade %></td>
+        <td><%= link_to 'Show', qualification %></td>
+        <td><%= link_to 'Edit', edit_qualification_path(qualification) %></td>
+        <td><%= link_to 'Destroy', qualification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qualification', new_qualification_path %>

@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qualification_id: 1
+  saqa_aligned: MyString
+  is_single_unit: MyString
+  code: 1
+  title: MyString
+  display_name: MyString
+  nqf_level: 1
+  credits: 1
+  accredited: MyString
+  accredited_start_on: 2018-08-07
+  accredited_end_on: 2018-08-07
+  saqa_reg_start_on: 2018-08-07
+  saqa_reg_end_on: 2018-08-07
+  can_expire: false
+  valid_months: 1
+  use_assessor: MyString
+  use_learnership_fields: MyString
+  use_training_planner: MyString
+  use_machine_attributes: MyString
+  use_logbook_fields: MyString
+  certificate_template_id: 1
+  status: MyString
+  created_by: MyString
+  created_on: 2018-08-07 14:08:26
+  qualification_type: MyString
+  saqa_enroll_end_on: 2018-08-07
+  use_formative_summative: MyString
+  use_apprenticeship_fields: MyString
+  artisan_trade: MyString
+
+two:
+  qualification_id: 1
+  saqa_aligned: MyString
+  is_single_unit: MyString
+  code: 1
+  title: MyString
+  display_name: MyString
+  nqf_level: 1
+  credits: 1
+  accredited: MyString
+  accredited_start_on: 2018-08-07
+  accredited_end_on: 2018-08-07
+  saqa_reg_start_on: 2018-08-07
+  saqa_reg_end_on: 2018-08-07
+  can_expire: false
+  valid_months: 1
+  use_assessor: MyString
+  use_learnership_fields: MyString
+  use_training_planner: MyString
+  use_machine_attributes: MyString
+  use_logbook_fields: MyString
+  certificate_template_id: 1
+  status: MyString
+  created_by: MyString
+  created_on: 2018-08-07 14:08:26
+  qualification_type: MyString
+  saqa_enroll_end_on: 2018-08-07
+  use_formative_summative: MyString
+  use_apprenticeship_fields: MyString
+  artisan_trade: MyString

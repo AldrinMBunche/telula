@@ -1,0 +1,2 @@
+json.extract! client, :id, :client_id, :company_id, :type, :name, :business_reg_no, :tel_no, :fax_no, :account_no, :r_address_line_1, :r_address_line_2, :r_suburb, :r_city, :r_province, :r_postal_code, :r_country, :p_address_line_1, :p_address_line_2, :p_suburb, :p_city, :p_province, :p_postal_code, :p_country, :client_branch, :sales_person, :branch_id, :sdl_number, :contact_name, :main_email, :wdyhau, :credit_limit, :payment_term, :created_at, :updated_at
+json.url client_url(client, format: :json)

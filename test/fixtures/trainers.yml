@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trainer_id: 1
+  client_id: 1
+  first_name: MyString
+  middle_names: MyString
+  last_name: MyString
+  id_number: MyString
+  date_of_birth: 2018-08-07 13:37:16
+  status: MyString
+  created_by: MyString
+  created_on: 2018-08-07 13:37:16
+  type: 
+  contact_no: 1
+  staff_rate_type: MyString
+  staff_rate: 1
+  status_reason: MyString
+  notes: MyString
+  id_type: MyString
+  training_speciality_area: MyString
+  email_address: MyString
+  licence_code: MyString
+
+two:
+  trainer_id: 1
+  client_id: 1
+  first_name: MyString
+  middle_names: MyString
+  last_name: MyString
+  id_number: MyString
+  date_of_birth: 2018-08-07 13:37:16
+  status: MyString
+  created_by: MyString
+  created_on: 2018-08-07 13:37:16
+  type: 
+  contact_no: 1
+  staff_rate_type: MyString
+  staff_rate: 1
+  status_reason: MyString
+  notes: MyString
+  id_type: MyString
+  training_speciality_area: MyString
+  email_address: MyString
+  licence_code: MyString

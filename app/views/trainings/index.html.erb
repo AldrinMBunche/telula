@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trainings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Training</th>
+      <th>Client</th>
+      <th>Branch</th>
+      <th>Qualification</th>
+      <th>Training status</th>
+      <th>Number of learners</th>
+      <th>Re certification</th>
+      <th>Event type</th>
+      <th>Assessment method</th>
+      <th>Internal</th>
+      <th>Start on</th>
+      <th>End on</th>
+      <th>Venue</th>
+      <th>Cert valid from</th>
+      <th>Cert valid to</th>
+      <th>Remind expiry</th>
+      <th>Machine code</th>
+      <th>Machine attachment</th>
+      <th>Machine capacity</th>
+      <th>Learnership branch</th>
+      <th>Learnership site</th>
+      <th>Notes</th>
+      <th>Qa</th>
+      <th>Duration</th>
+      <th>Ls start on</th>
+      <th>Ls end on</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainings.each do |training| %>
+      <tr>
+        <td><%= training.training_id %></td>
+        <td><%= training.client_id %></td>
+        <td><%= training.branch_id %></td>
+        <td><%= training.qualification_id %></td>
+        <td><%= training.training_status %></td>
+        <td><%= training.number_of_learners %></td>
+        <td><%= training.re_certification %></td>
+        <td><%= training.event_type %></td>
+        <td><%= training.assessment_method %></td>
+        <td><%= training.internal %></td>
+        <td><%= training.start_on %></td>
+        <td><%= training.end_on %></td>
+        <td><%= training.venue %></td>
+        <td><%= training.cert_valid_from %></td>
+        <td><%= training.cert_valid_to %></td>
+        <td><%= training.remind_expiry %></td>
+        <td><%= training.machine_code %></td>
+        <td><%= training.machine_attachment %></td>
+        <td><%= training.machine_capacity %></td>
+        <td><%= training.learnership_branch %></td>
+        <td><%= training.learnership_site %></td>
+        <td><%= training.notes %></td>
+        <td><%= training.qa %></td>
+        <td><%= training.duration %></td>
+        <td><%= training.ls_start_on %></td>
+        <td><%= training.ls_end_on %></td>
+        <td><%= link_to 'Show', training %></td>
+        <td><%= link_to 'Edit', edit_training_path(training) %></td>
+        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Training', new_training_path %>

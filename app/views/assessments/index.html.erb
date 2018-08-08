@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Assessments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assessment</th>
+      <th>Training</th>
+      <th>Trainer</th>
+      <th>Unit</th>
+      <th>Learner</th>
+      <th>Assess date</th>
+      <th>Poe</th>
+      <th>Rpl</th>
+      <th>Results</th>
+      <th>Moderated</th>
+      <th>Attended</th>
+      <th>Formative results</th>
+      <th>Formative attempts</th>
+      <th>Summative results</th>
+      <th>Summative attempts</th>
+      <th>Poe not submit reason</th>
+      <th>Reason not completed</th>
+      <th>Assesor recommendations</th>
+      <th>Mentor notes</th>
+      <th>Moderated ext</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assessments.each do |assessment| %>
+      <tr>
+        <td><%= assessment.assessment_id %></td>
+        <td><%= assessment.training_id %></td>
+        <td><%= assessment.trainer_id %></td>
+        <td><%= assessment.unit_id %></td>
+        <td><%= assessment.learner_id %></td>
+        <td><%= assessment.assess_date %></td>
+        <td><%= assessment.poe %></td>
+        <td><%= assessment.rpl %></td>
+        <td><%= assessment.results %></td>
+        <td><%= assessment.moderated %></td>
+        <td><%= assessment.attended %></td>
+        <td><%= assessment.formative_results %></td>
+        <td><%= assessment.formative_attempts %></td>
+        <td><%= assessment.summative_results %></td>
+        <td><%= assessment.summative_attempts %></td>
+        <td><%= assessment.poe_not_submit_reason %></td>
+        <td><%= assessment.reason_not_completed %></td>
+        <td><%= assessment.assesor_recommendations %></td>
+        <td><%= assessment.mentor_notes %></td>
+        <td><%= assessment.moderated_ext %></td>
+        <td><%= link_to 'Show', assessment %></td>
+        <td><%= link_to 'Edit', edit_assessment_path(assessment) %></td>
+        <td><%= link_to 'Destroy', assessment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assessment', new_assessment_path %>

@@ -23,7 +23,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* 
+10 August 2018
+Learners are 4 column looks ok 
+Need to fix fonts sizes and center headings 
+Put photo as well and change the data type 
+
 
 
 Please feel free to use a different markup language if you do not plan to run

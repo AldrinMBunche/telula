@@ -1,7 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Qualifications</h1>
+<h1>Qualifications</h1>
 
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+ <thead>
+ 
 <table>
   <thead>
     <tr>
@@ -14,7 +32,9 @@
       <th>Nqf level</th>
       <th>Credits</th>
       <th>Accredited</th>
-      <th>Accredited start on</th>
+	  
+	  
+      <!-- <th>Accredited start on</th>
       <th>Accredited end on</th>
       <th>Saqa reg start on</th>
       <th>Saqa reg end on</th>
@@ -33,7 +53,7 @@
       <th>Saqa enroll end on</th>
       <th>Use formative summative</th>
       <th>Use apprenticeship fields</th>
-      <th>Artisan trade</th>
+      <th>Artisan trade</th> --> 
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -50,7 +70,7 @@
         <td><%= qualification.nqf_level %></td>
         <td><%= qualification.credits %></td>
         <td><%= qualification.accredited %></td>
-        <td><%= qualification.accredited_start_on %></td>
+       <!--  <td><%= qualification.accredited_start_on %></td>
         <td><%= qualification.accredited_end_on %></td>
         <td><%= qualification.saqa_reg_start_on %></td>
         <td><%= qualification.saqa_reg_end_on %></td>
@@ -69,7 +89,8 @@
         <td><%= qualification.saqa_enroll_end_on %></td>
         <td><%= qualification.use_formative_summative %></td>
         <td><%= qualification.use_apprenticeship_fields %></td>
-        <td><%= qualification.artisan_trade %></td>
+        <td><%= qualification.artisan_trade %></td> -->
+		
         <td><%= link_to 'Show', qualification %></td>
         <td><%= link_to 'Edit', edit_qualification_path(qualification) %></td>
         <td><%= link_to 'Destroy', qualification, method: :delete, data: { confirm: 'Are you sure?' } %></td>

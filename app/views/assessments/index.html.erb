@@ -1,6 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Assessments</h1>
+<h1>Assessments</h1>
+<!-- Below table is left align can be made center is not too much data-->
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+  <thead>
+
 
 <table>
   <thead>
@@ -11,11 +32,12 @@
       <th>Unit</th>
       <th>Learner</th>
       <th>Assess date</th>
-      <th>Poe</th>
-      <th>Rpl</th>
+     
       <th>Results</th>
       <th>Moderated</th>
       <th>Attended</th>
+     <!--  <th>Poe</th>
+      <th>Rpl</th>
       <th>Formative results</th>
       <th>Formative attempts</th>
       <th>Summative results</th>
@@ -24,7 +46,7 @@
       <th>Reason not completed</th>
       <th>Assesor recommendations</th>
       <th>Mentor notes</th>
-      <th>Moderated ext</th>
+      <th>Moderated ext</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -38,11 +60,12 @@
         <td><%= assessment.unit_id %></td>
         <td><%= assessment.learner_id %></td>
         <td><%= assessment.assess_date %></td>
-        <td><%= assessment.poe %></td>
-        <td><%= assessment.rpl %></td>
-        <td><%= assessment.results %></td>
-        <td><%= assessment.moderated %></td>
-        <td><%= assessment.attended %></td>
+		 <td><%= assessment.results %></td>
+		  <td><%= assessment.moderated %></td>
+        <td><%= assessment.attended %></td> 
+		 
+        <!-- <td><%= assessment.poe %></td>
+        <td><%= assessment.rpl %></td>        
         <td><%= assessment.formative_results %></td>
         <td><%= assessment.formative_attempts %></td>
         <td><%= assessment.summative_results %></td>
@@ -51,7 +74,9 @@
         <td><%= assessment.reason_not_completed %></td>
         <td><%= assessment.assesor_recommendations %></td>
         <td><%= assessment.mentor_notes %></td>
-        <td><%= assessment.moderated_ext %></td>
+        <td><%= assessment.moderated_ext %></td> -->
+        
+        
         <td><%= link_to 'Show', assessment %></td>
         <td><%= link_to 'Edit', edit_assessment_path(assessment) %></td>
         <td><%= link_to 'Destroy', assessment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

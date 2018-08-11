@@ -11,7 +11,43 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 900px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p><div class="field">
     <%= f.label :training_id %><br>
     <%= f.number_field :training_id %>
   </div>
@@ -63,7 +99,13 @@
     <%= f.label :venue %><br>
     <%= f.text_field :venue %>
   </div>
-  <div class="field">
+
+  </p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>
+    <div class="field">
     <%= f.label :cert_valid_from %><br>
     <%= f.date_select :cert_valid_from %>
   </div>
@@ -117,5 +159,14 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div></p>
   </div>
+</div>
+
+</body>
+</html>
+
+
+
+  
 <% end %>

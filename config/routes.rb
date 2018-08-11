@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clients
   resources :qualifications
   resources :moderations
   resources :assessments
@@ -6,10 +7,9 @@ Rails.application.routes.draw do
   resources :trainers
   #root 'welcome#index'
   resources :trainings
-  resources :clients
   resources :learners
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all yours routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # 

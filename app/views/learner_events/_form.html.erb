@@ -11,7 +11,43 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 700px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p><div class="field">
     <%= f.label :TRAINING_ID %><br>
     <%= f.number_field :TRAINING_ID %>
   </div>
@@ -62,8 +98,11 @@
   <div class="field">
     <%= f.label :CANCELATION_ON %><br>
     <%= f.date_select :CANCELATION_ON %>
+  </div></p>
   </div>
-  <div class="field">
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p><div class="field">
     <%= f.label :TRADE_TEST_ON %><br>
     <%= f.date_select :TRADE_TEST_ON %>
   </div>
@@ -101,5 +140,14 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div></p>
   </div>
+</div>
+
+</body>
+</html>
+
+
+  
+  
 <% end %>

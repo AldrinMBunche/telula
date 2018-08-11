@@ -1,6 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Learner Events</h1>
+<h1>Learner Training Events</h1>
+
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+ <thead>
 
 <table>
   <thead>
@@ -12,11 +30,12 @@
       <th>Registration no</th>
       <th>Certificate no</th>
       <th>Certificate on</th>
-      <th>Batch no</th>
-      <th>Machine restriction</th>
-      <th>Certificate issued</th>
+	  <th>Certificate issued</th>
       <th>Certificate issued by</th>
-      <th>Old batch no</th>
+	  
+     <!-- <th>Batch no</th>
+      <th>Machine restriction</th>
+            <th>Old batch no</th>
       <th>Cancelation on</th>
       <th>Trade test on</th>
       <th>Certificate notes</th>
@@ -26,7 +45,7 @@
       <th>Prdp</th>
       <th>Log</th>
       <th>Pri or</th>
-      <th>Id doc</th>
+      <th>Id doc</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -41,10 +60,12 @@
         <td><%= learner_event.REGISTRATION_NO %></td>
         <td><%= learner_event.CERTIFICATE_NO %></td>
         <td><%= learner_event.CERTIFICATE_ON %></td>
-        <td><%= learner_event.BATCH_NO %></td>
-        <td><%= learner_event.MACHINE_RESTRICTION %></td>
-        <td><%= learner_event.CERTIFICATE_ISSUED %></td>
+		   <td><%= learner_event.CERTIFICATE_ISSUED %></td>
         <td><%= learner_event.CERTIFICATE_ISSUED_BY %></td>
+		
+       <!-- <td><%= learner_event.BATCH_NO %></td>
+        <td><%= learner_event.MACHINE_RESTRICTION %></td>
+     
         <td><%= learner_event.OLD_BATCH_NO %></td>
         <td><%= learner_event.CANCELATION_ON %></td>
         <td><%= learner_event.TRADE_TEST_ON %></td>
@@ -55,9 +76,11 @@
         <td><%= learner_event.PRDP %></td>
         <td><%= learner_event.LOG %></td>
         <td><%= learner_event.PRI_OR %></td>
-        <td><%= learner_event.ID_DOC %></td>
+        <td><%= learner_event.ID_DOC %></td> -->
+		
+		
         <td><%= link_to 'Show', learner_event %></td>
-        <td><%= link_to 'Edit', edit_learner_event_path(learner_event) %></td>
+        <td><%= link_to 'Edit', edit_learner_event_path(learner_event) %></td> 
         <td><%= link_to 'Destroy', learner_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -26,8 +26,36 @@ Things you may want to cover:
 * 
 10 August 2018
 Learners are 4 column looks ok 
+11 August 2018
+Two columns on edit and new done on all for below 
+Trainer, trainings for training events , Assessments , qualifications , learner_events to tie with trainings 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns
+
+Table with below code looks nice and commented lots to make it look less busy 
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+ <thead>
+Above table done on Trainer, trainings for training events , Assessments , qualifications , learner_events to tie with trainings 
+
+To-do
+Some columns to remove especially sales items        
 Need to fix fonts sizes and center headings 
-Put photo as well and change the data type 
+Put photo as well and change the data type
+Button for new stuff move to tops
 
 
 

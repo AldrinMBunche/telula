@@ -1,6 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Clients</h1>
+<h1>Clients</h1>
+<!-- Below table is left align can be made center is not too much data-->
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+  <thead>
+
+
 
 <table>
   <thead>
@@ -11,8 +33,10 @@
       <th>Name</th>
       <th>Business reg no</th>
       <th>Tel no</th>
-      <th>Fax no</th>
-      <th>Account no</th>
+ <th>Contact name</th>
+      <th>Main email</th>     
+	  <!--
+	  <th>Fax no</th>
       <th>R address line 1</th>
       <th>R address line 2</th>
       <th>R suburb</th>
@@ -31,11 +55,11 @@
       <th>Sales person</th>
       <th>Branch</th>
       <th>Sdl number</th>
-      <th>Contact name</th>
-      <th>Main email</th>
-      <th>Wdyhau</th>
+ <th>Account no</th>     
+       <th>Wdyhau</th>
       <th>Credit limit</th>
-      <th>Payment term</th>
+      <th>Payment term</th> -->
+	  
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -49,7 +73,10 @@
         <td><%= client.name %></td>
         <td><%= client.business_reg_no %></td>
         <td><%= client.tel_no %></td>
-        <td><%= client.fax_no %></td>
+		  <td><%= client.contact_name %></td>
+        <td><%= client.main_email %></td>
+		
+        <!--<td><%= client.fax_no %></td>
         <td><%= client.account_no %></td>
         <td><%= client.r_address_line_1 %></td>
         <td><%= client.r_address_line_2 %></td>
@@ -69,11 +96,11 @@
         <td><%= client.sales_person %></td>
         <td><%= client.branch_id %></td>
         <td><%= client.sdl_number %></td>
-        <td><%= client.contact_name %></td>
-        <td><%= client.main_email %></td>
+      
         <td><%= client.wdyhau %></td>
         <td><%= client.credit_limit %></td>
-        <td><%= client.payment_term %></td>
+        <td><%= client.payment_term %></td> -->
+		
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>

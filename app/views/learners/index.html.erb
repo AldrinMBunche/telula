@@ -1,6 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Learners</h1>
+<h1>Learners</h1>
+
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+ <thead>
 
 <table>
   <thead>
@@ -11,11 +29,13 @@
       <th>Id number</th>
       <th>Passport number</th>
       <th>Date of birth</th>
+	     <th>Title</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Middle names</th>
-      <th>Title</th>
-      <th>Equity</th>
+   
+      
+	  <!-- <th>Equity</th>
       <th>Gender</th>
       <th>Nationality</th>
       <th>Citizen status</th>
@@ -68,11 +88,12 @@
         <td><%= learner.id_number %></td>
         <td><%= learner.passport_number %></td>
         <td><%= learner.date_of_birth %></td>
+		 <td><%= learner.title %></td>
         <td><%= learner.first_name %></td>
         <td><%= learner.last_name %></td>
         <td><%= learner.middle_names %></td>
-        <td><%= learner.title %></td>
-        <td><%= learner.equity %></td>
+       
+        <!-- <td><%= learner.equity %></td>
         <td><%= learner.gender %></td>
         <td><%= learner.nationality %></td>
         <td><%= learner.citizen_status %></td>
@@ -111,7 +132,8 @@
         <td><%= learner.urban_rural %></td>
         <td><%= learner.photo %></td>
         <td><%= learner.photo_name %></td>
-        <td><%= learner.notes %></td>
+        <td><%= learner.notes %></td> -->
+		
         <td><%= link_to 'Show', learner %></td>
         <td><%= link_to 'Edit', edit_learner_path(learner) %></td>
         <td><%= link_to 'Destroy', learner, method: :delete, data: { confirm: 'Are you sure?' } %></td>

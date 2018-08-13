@@ -1,0 +1,32 @@
+== Info guides on what websites was used where
+1. 2 or 3 Columns
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns
+
+2. Table with below code looks nice and commented lots to make it look less busy 
+<table>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+ <thead>
+
+3. Navbar is done 
+https://stackoverflow.com/questions/25537881/how-can-i-make-my-navbar-appear-on-every-page-in-my-rails-app
+
+https://guides.rubyonrails.org/layouts_and_rendering.html#structuring-layouts
+
+http://railsapps.github.io/rails-default-application-layout.html
+
+

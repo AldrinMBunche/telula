@@ -1,5 +1,7 @@
 == README
 
+make sure 11th updated 
+
 Must document all my stuff here dates etc 
 
 This README would normally document whatever steps are necessary to get the
@@ -50,12 +52,10 @@ tr:nth-child(even) {
 </style>
  <thead>
 Above table done on Trainer, trainings for training events , Assessments , qualifications , learner_events to tie with trainings 
+13 August 2018
+Navbar is done 
 
-To-do
-Some columns to remove especially sales items        
-Need to fix fonts sizes and center headings 
-Put photo as well and change the data type
-Button for new stuff move to tops
+
 
 
 

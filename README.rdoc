@@ -55,7 +55,10 @@ Above table done on Trainer, trainings for training events , Assessments , quali
 13 August 2018
 Navbar is done 
 
-
+Button for new stuff move to tops
+Links for Navbar & icon
+Sort its links out …
+Devise - fine tune it 
 
 
 

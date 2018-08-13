@@ -7,7 +7,7 @@ gem 'rails', '4.2.4'
 gem 'pg'
 # Use SCSS for styleshe
 
-
+gem 'devise'
 
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

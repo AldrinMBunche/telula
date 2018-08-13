@@ -29,4 +29,6 @@ https://guides.rubyonrails.org/layouts_and_rendering.html#structuring-layouts
 
 http://railsapps.github.io/rails-default-application-layout.html
 
+4 . Devise 
+https://guides.railsgirls.com/devise
 

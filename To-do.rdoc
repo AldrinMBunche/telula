@@ -1,3 +1,6 @@
+GIT 
+
+
 To-do
 Some columns to remove especially sales items        
 Need to fix fonts sizes and center headings 
@@ -9,7 +12,7 @@ Links for Navbar & icon
 Left with qualifications units + units 
 Sort its links out …
 Increase PK instead of from 1 
-Devise 
+Devise - fine tune it 
 Add data & 1 report  
 
 Fix Heroku for demo … Or show on laptop 

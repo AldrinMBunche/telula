@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dashboards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Static</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+       
+    <%= pie_chart(@learners) %>
+    
+    
+    <% @dashboards.each do |dashboard| %>
+      <tr>
+        <td><%= dashboard.static %></td>
+        <td><%= dashboard.date %></td>
+        <td><%= link_to 'Show', dashboard %></td>
+        <td><%= link_to 'Edit', edit_dashboard_path(dashboard) %></td>
+        <td><%= link_to 'Destroy', dashboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

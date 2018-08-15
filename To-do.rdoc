@@ -6,7 +6,6 @@ Some columns to remove especially sales items
 Need to fix fonts sizes and center headings 
 Put photo as well and change the data type
 
-
 Left with qualifications units + units 
 
 Increase PK instead of from 1 

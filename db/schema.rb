@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180813130754) do
+ActiveRecord::Schema.define(version: 20180815093420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180813130754) do
   create_table "clients", force: :cascade do |t|
     t.integer  "client_id"
     t.integer  "company_id"
-    t.string   "type"
+    t.string   "type_of_client"
     t.string   "name"
     t.string   "business_reg_no"
     t.integer  "tel_no"
@@ -75,6 +75,13 @@ ActiveRecord::Schema.define(version: 20180813130754) do
     t.string   "payment_term"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "dashboards", force: :cascade do |t|
+    t.integer  "static"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "learner_events", force: :cascade do |t|
@@ -108,7 +115,7 @@ ActiveRecord::Schema.define(version: 20180813130754) do
     t.integer  "learner_id"
     t.integer  "client_id"
     t.string   "id_type"
-    t.integer  "id_number"
+    t.integer  "id_number",                        limit: 8
     t.string   "passport_number"
     t.string   "date_of_birth"
     t.string   "first_name"
@@ -155,8 +162,8 @@ ActiveRecord::Schema.define(version: 20180813130754) do
     t.text     "photo"
     t.string   "photo_name"
     t.string   "notes"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
   end
 
   create_table "moderations", force: :cascade do |t|
@@ -208,6 +215,12 @@ ActiveRecord::Schema.define(version: 20180813130754) do
     t.string   "artisan_trade"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "statics", force: :cascade do |t|
+    t.integer  "static"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trainers", force: :cascade do |t|

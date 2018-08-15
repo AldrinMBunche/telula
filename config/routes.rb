@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+
+
+  resources :dashboards
   devise_for :users
   resources :clients
   resources :qualifications
@@ -6,9 +10,13 @@ Rails.application.routes.draw do
   resources :assessments
   resources :learner_events
   resources :trainers
-  #root 'welcome#index'
+ 
   resources :trainings
   resources :learners
+  
+   mount ReportsKit::Engine, at: '/'
+   #....
+   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all yours routes lay out with "rake routes".
 

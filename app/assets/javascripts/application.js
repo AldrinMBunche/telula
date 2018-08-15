@@ -13,9 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-////= require jquery
+//= require jquery
 //= require bootstrap-sprockets
+//= require Chart.bundle
+//= require chartkick
+//= require reports_kit/application
 //= require_tree .
+
+
 $('#example-one a').click(function(e) {
     $('#example-one a').removeClass('current_page_item');
     $(this).addClass('current_page_item');

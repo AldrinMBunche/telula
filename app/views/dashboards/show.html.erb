@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Static:</strong>
+  <%= @dashboard.static %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @dashboard.date %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_path(@dashboard) %> |
+<%= link_to 'Back', dashboards_path %>

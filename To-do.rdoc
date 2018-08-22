@@ -12,4 +12,4 @@ Increase PK instead of from 1
 
 Add data & 1 report  
 
-Fix Heroku for demo … Or show on laptop 
+Fix Heroku  

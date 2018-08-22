@@ -1,9 +1,5 @@
 == README
 
-make sure 11th updated 
-
-Must document all my stuff here dates etc 
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -60,6 +56,10 @@ Links for Navbar & icon
 Sort its links out …
 Devise - fine tune it 
 
+15 August 2018
+Adding data - taking shape 
+Dashboard … Stats – Home page 
+The dashboards page is the home or root page 
 
 
 Please feel free to use a different markup language if you do not plan to run

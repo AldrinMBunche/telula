@@ -49,11 +49,11 @@
     <h2>Column 1</h2>
     <p><div class="field">
     <%= f.label :training_id %><br>
-    <%= f.number_field :training_id %>
+    <%= f.number_field :id %>
   </div>
   <div class="field">
     <%= f.label :client_id %><br>
-    <%= f.number_field :client_id %>
+     <%= f.collection_select :client_id, Client.all, :client_id , :name  , :include_blank => "Please select Client..." %>
   </div>
   <div class="field">
     <%= f.label :branch_id %><br>
@@ -61,7 +61,7 @@
   </div>
   <div class="field">
     <%= f.label :qualification_id %><br>
-    <%= f.number_field :qualification_id %>
+    <%= f.collection_select :id , Qualification.all, :id  , :title,   :include_blank => "Please select Qualification..." %>
   </div>
   <div class="field">
     <%= f.label :training_status %><br>
